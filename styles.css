@@ -53,25 +53,28 @@ a:hover {
     
 }
 
-.block1 {
-    background-color: #1f2937;
+/*First Block*/
+
+.block {
     height: 480px;
     padding: 10%;
-    display: flex;
-    justify-content: space-between;
-    gap: 0 40px;   
+    display: flex;  
 }
 
-.block1 > * {
+.first {
+    background-color: #1f2937; /*Just remembered that i can group similar by structure divs, give more than one name to them for sake of optimisation*/
+    gap: 0 40px; /*Иными словами, вспомнил что можно контейнерам давать через пробел названия и отдельно от каждого слова задавать им параметры. Это очень удобно, так как не надо тратить строки на то, что бы задать параметры стиля одинаковым контейнерам*/
+}
+
+.first > * {
     flex-basis: 100%;  /*whoah! this thing is amazing! I didn't know how to deal with unequal propotions of divs*/
 }
+
 .left {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start; 
-    
-    
 }
 
 h1 {
@@ -96,11 +99,10 @@ button {
     font-weight: 700;
 }
 
-.image {
-    
-    
+img {
+    height: 253.41px;
+    width: 499.2px;
 }
 
-img {
-    height: 220px;
-}
+/*Second Block*/
+
