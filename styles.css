@@ -7,12 +7,20 @@
 
 /*head*/
 
+/*Just found out the issue with making side space by declaring padding in %. Sick... if in this case u will change width of window, u'll see case of issue. 
+Don't do that thing! If u want to make free space, u should use margin-left/right auto
+and nest one more container between items and parent div.  */
 .header {
     background-color: #1f2937;
+}
+
+.head-in {
     color: #f9faf8;
-    height: 80px;
-    width: 100%; 
-    padding: 16px 10%;
+    height: 80px; 
+    max-width: 80rem;
+    padding: 16px 0;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
