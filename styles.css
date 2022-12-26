@@ -21,7 +21,7 @@ and nest one more container between items and parent div.  */
     color: #f9faf8;
     height: 80px; 
     max-width: 80rem;
-    padding: 16px 0;
+    padding: 16px 1.5rem;
     margin-left: auto;
     margin-right: auto;
     display: flex;
