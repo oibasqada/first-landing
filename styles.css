@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Helvetica, sans-serif;
+    font-family: Roboto, sans-serif;
 }
 
 /*head*/
@@ -10,6 +12,7 @@
 /*Just found out the issue with making side space by declaring padding in %. Sick... if in this case u will change width of window, u'll see case of issue. 
 Don't do that thing! If u want to make free space, u should use margin-left/right auto
 and nest one more container between items and parent div.  */
+
 .header {
     background-color: #1f2937;
 }
@@ -43,46 +46,49 @@ a {
     color: #f9faf8;
 }
 
-a:hover {
+ul>li>a:hover {
     color: tomato
 }
 
 
 
-/*body*/
+/*Page*/
 
-.body {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    
+.a-container {
+    background-color: #1f2937;
 }
 
 /*First Block*/
 
+
 .block {
-    height: 480px;
-    padding: 10%;
-    display: flex;  
+    margin: 0 auto;
+    height: 500px;
+    max-width: 80rem;
+    
 }
 
 .first {
-    background-color: #1f2937; /*Just remembered that i can group similar by structure divs, give more than one name to them for sake of optimisation*/
-    gap: 0 40px; /*Иными словами, вспомнил что можно контейнерам давать через пробел названия и отдельно от каждого слова задавать им параметры. Это очень удобно, так как не надо тратить строки на то, что бы задать параметры стиля одинаковым контейнерам*/
+    display: flex; /*Just remembered that i can group similar by structure divs, give more than one name to them for sake of optimisation*/
+    gap: 0 70px; /*Иными словами, вспомнил что можно контейнерам давать через пробел названия и отдельно от каждого слова задавать им параметры. Это очень удобно, так как не надо тратить строки на то, что бы задать параметры стиля одинаковым контейнерам*/
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
 }
 
-.first > * {
-    flex-basis: 100%;  /*whoah! this thing is amazing! I didn't know how to deal with unequal propotions of divs*/
-}
+ /*whoah! this thing is amazing! I didn't know how to deal with unequal propotions of divs*/
+
 
 .left {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start; 
+    max-width: 570px;
+}
+
+.text-head {
+    width: 70%;
 }
 
 h1 {
@@ -104,13 +110,127 @@ button {
     padding: 8px 28px;
     border-radius: 8px;
     border: 1px solid #3882f6;
-    font-weight: 700;
+    font-weight: 900;
 }
 
 img {
-    height: 253.41px;
-    width: 499.2px;
+    max-width: 500px;
+    border-radius: 32px;
 }
 
 /*Second Block*/
 
+
+.b-container {
+    background-color: white;
+}
+
+.second {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.info {
+    font-size: 36px;
+    font-weight: 900;
+    color: #1f2937;
+    padding: 50px;
+}
+
+.pics {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.item {
+    max-width: 200px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.pics > .item > img {
+    width: 200px;
+    height: 200px;
+    border: #3882f6 4px solid;
+}
+
+/*Here comes the C*/
+
+.c-container {
+    background-color: #e5e7eb;
+}
+
+.third {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.quote {
+    font-size: 41px;
+    color: #1f2937;
+    font-style: italic;
+    font-weight: 100;
+    width: 950px;
+}
+
+.author {
+    width: 950px;
+    font-weight: 900;
+    font-size: 24px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*D-D-D*/
+
+.action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    width: 80rem;
+    height: 150px;
+    background-color: #3882f6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 115px;
+    color: #f9faf8;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.d-container > .block {
+    height: 420px;
+}
+
+.modal > button {
+    border: #f9faf8 3px solid;
+}
+
+.call {
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.text {
+    font-size: 18px;
+}
+
+/*Footer*/
+
+.footer {
+    background-color: #1f2937;
+    color: #f9faf8;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
